@@ -140,14 +140,12 @@ Examples of successful reconstructions include:
 ### 1. Generate Data
 To generate the dataset required for training:
 ```bash
-cd src
 python generate_data.py
 ```
 
 ### 2. First Deliverable - Object Position Prediction using MLP
 To train and evaluate the MLP model:
 ```bash
-cd src
 python Homework1_MLP.py
 ```
 This will train the MLP model, evaluate on test data, and save results to `First_deliverable_outputs/`.
@@ -155,7 +153,6 @@ This will train the MLP model, evaluate on test data, and save results to `First
 ### 3. Second Deliverable - Object Position Prediction using CNN
 To train and evaluate the CNN model:
 ```bash
-cd src
 python Homework1_CNN.py
 ```
 This will train the CNN model, evaluate on test data, and save results to `Second_deliverable_outputs/`.
@@ -163,7 +160,6 @@ This will train the CNN model, evaluate on test data, and save results to `Secon
 ### 4. Third Deliverable - Post-Action Image Reconstruction
 To train and evaluate the image reconstructor:
 ```bash
-cd src
 python Homework1_IMG.py
 ```
 This will train the reconstruction model, evaluate on test data, and save results to `Third_deliverable_outputs/`.
@@ -171,7 +167,6 @@ This will train the reconstruction model, evaluate on test data, and save result
 ### 5. Save Predicted Coordinates as CSV
 To convert the prediction files to CSV format:
 ```bash
-cd src
 python saving_as_csv.py
 ```
 **Note:** This script must be run from inside the `src` directory.
