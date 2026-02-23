@@ -1,24 +1,3 @@
-'''import numpy as np
-import pandas as pd
-
-# 1. Load the data
-data = np.load('First_deliverable_coordinat_predictions.npz')
-
-# 2. Create a DataFrame
-# We flatten() the arrays just in case they are multidimensional
-df = pd.DataFrame({
-    'Target': data['targets'].flatten(),
-    'Prediction': data['predictions'].flatten()
-})
-
-# 3. View the first few rows
-print(df.head())
-
-# 4. Optional: Save to an actual CSV file to open in Excel/Sheets
-df.to_csv('First_deliverable_results.csv', index=False)
-print("\nResults also saved to 'First_deliverable_results.csv'")'''
-
-
 import numpy as np
 import pandas as pd
 import os
@@ -62,31 +41,3 @@ for select in selects:
         print(f"Error: Could not find {file_path}. Did you run the training script first?")
 
 
-
-'''
-# Load the file
-data2 = np.load('First_deliverable_outputs/First_deliverable_predictions.npz')
-
-# List the keys inside (should be ['predictions', 'targets'])
-print("Keys in file:", data2.files)
-
-# Look at the first 5 guesses vs reality
-preds = data2['predictions']
-actual = data2['targets']
-
-for i in range(5):
-    print(f"Sample {i}: Model guessed {preds[i]}, Actual was {actual[i]}")
-
-# 4. Save to CSV inside the output folder
-
-df2 = pd.DataFrame({
-    'True Value': actual[:, 0],
-    'Predicted Value': preds[:, 0],
-    
-})
-
-csv_save_path = 'First_deliverable_outputs/First_deliverable_predictions_results.csv'
-df2.to_csv(csv_save_path, index=False)
-print(f"\nResults successfully saved to '{csv_save_path}'")'''
-    
-    

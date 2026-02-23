@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
-import os  # Added to handle folder creation and path management
+import os  
 
 # --- 1. Dataset Class ---
 class RobotDataset(Dataset):
@@ -167,7 +167,7 @@ if __name__ == "__main__":
     plt.legend()
     plt.grid(True)
     
-    # Updated: Save the plot inside the output folder
+    #Save the plot inside the output folder
     plot_path = os.path.join(output_dir, 'Second_deliverable_cnn_loss_curve.png')
     plt.savefig(plot_path)
     print(f"Loss curve saved to '{plot_path}'")
@@ -194,14 +194,14 @@ if __name__ == "__main__":
     final_predictions_array = np.vstack(all_predictions)
     final_true_array = np.vstack(all_true_positions)
     
-    # Updated: Save predictions inside the output folder
+    # Save predictions inside the output folder
     pred_path = os.path.join(output_dir, 'Second_deliverable_predictions.npz')
     np.savez(pred_path, 
              predictions=final_predictions_array, 
              targets=final_true_array)
     print(f"Predictions saved to '{pred_path}'!")
 
-    # NEW: Save coordinate predictions (True vs Predicted)
+    # Save coordinate predictions (True vs Predicted)
     coord_pred_path = os.path.join(output_dir, 'Second_deliverable_coordinate_predictions.npz')
     np.savez(coord_pred_path,
              true_pos=final_true_array,
@@ -209,7 +209,6 @@ if __name__ == "__main__":
     print(f"Coordinate predictions saved to '{coord_pred_path}'!")
 
     # --- 6. Save the Trained Model ---
-    # Updated: Save model weights inside the output folder
     model_save_path = os.path.join(output_dir, 'Second_deliverable_cnn_model.pth')
     torch.save(model.state_dict(), model_save_path)
     print(f"Model successfully saved to '{model_save_path}'!")
