@@ -131,8 +131,6 @@ Examples of successful reconstructions include:
 | Metric | MLP | CNN | Image Reconstructor |
 |--------|-----|-----|---------------------|
 | Test MSE | 0.0565 | 0.00155 | 0.00055 |
-| Model Parameters | ~6.4M | ~0.19M | ~7.2M |
-| Inference Speed | Fast | Very Fast | Fast |
 | Task | 2D Position | 2D Position | Full Image |
 
 ## How to Run
@@ -174,19 +172,12 @@ python saving_as_csv.py
 ## Dataset
 
 - **Source:** Robot manipulation simulation using MuJoCo
-- **Total Samples:** 202 test samples
 - **Image Resolution:** 128×128 pixels (3 channels - RGB)
 - **Actions:** 4 discrete action types (one-hot encoded)
 - **Targets:** 
   - Deliverable 1 & 2: Object (x, y) coordinates
   - Deliverable 3: Post-action images
 
-## Hardware & Software
-
-- **Framework:** PyTorch
-- **Precision:** 32-bit floating point
-- **Device:** CPU/GPU compatible
-- **Python Version:** 3.7+
 
 ## Output Files
 
